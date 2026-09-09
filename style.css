@@ -547,9 +547,22 @@ section {
     transition: var(--transition-fast);
 }
 
+.tag-highlight {
+    background: rgba(59, 130, 246, 0.12);
+    border-color: rgba(59, 130, 246, 0.3);
+    color: #93c5fd;
+    font-weight: 600;
+}
+
 .skill-card:hover .tag {
     background: rgba(59, 130, 246, 0.05);
     border-color: rgba(59, 130, 246, 0.15);
+}
+
+.skill-card:hover .tag-highlight {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.4);
+    color: #ffffff;
 }
 
 
@@ -767,6 +780,30 @@ section {
 .timeline-desc {
     font-size: 14px;
     color: var(--text-muted);
+}
+
+.timeline-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.timeline-bullets li {
+    font-size: 14px;
+    color: var(--text-muted);
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.55;
+}
+
+.timeline-bullets li::before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: 4px;
+    font-size: 18px;
+    top: -2px;
 }
 
 /* Education Details block */
